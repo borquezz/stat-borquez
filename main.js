@@ -35,14 +35,26 @@ switch (command) {
         console.log(result);
         break;
     case "mean2":
+        if (numbers.length % 2 != 0) {
+            console.log("Arguments missing, amount of numbers should be even!");
+            process.exit(1);
+        }
         result = lib.mean2(numbers);
         console.log(result[0].toFixed(2), result[1].toFixed(2)); //Prints them as strings, ask if its okay
         break;
     case "med2":
+        if (numbers.length % 2 != 0) {
+            console.log("Arguments missing, amount of numbers should be even!");
+            process.exit(1);
+        }
         result = lib.med2(numbers);
         console.log(result[0].toFixed(2), result[1].toFixed(2));
         break;
     case "pareto":
+        if (numbers.length % 2 != 0) {
+            console.log("Arguments missing, amount of numbers should be even!");
+            process.exit(1);
+        }
         result = lib.pareto(numbers);
         for (let i = 0; i < result.length; i++) {
             console.log(result[i][0], result[i][1]);
